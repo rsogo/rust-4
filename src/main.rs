@@ -92,14 +92,14 @@ fn main() {
     let c4 = 'が';
     assert!(c4.is_alphabetic()); // これ成功するので注意
 
-    // let mut n = 0;
-    // println!("main: n = {}", n);
+    let mut n = 0;
+    println!("main: n = {}", n);
 
-    // f1(n);
-    // println!("main: n = {}", n);
+    fnc1(n);
+    println!("main: n = {}", n);
 
-    // f2(&mut n);
-    // println!("main: n = {}", n);
+    fnc2(&mut n);
+    println!("main: n = {}", n);
 
 }
 
@@ -107,12 +107,12 @@ fn hello() {
     println!("Hello, world!");
 }
 
-fn f1(mut n: i32) {
+fn fnc1(mut n: u32) {
     n = 1;
     println!("f1: n = {}", n);
 }
 
-fn f2(n_ptr: &mut u32) {
+fn fnc2(n_ptr: &mut u32) {
     println!("f2: n_ptr = {:p}", n_ptr);
 
     *n_ptr = 2;
